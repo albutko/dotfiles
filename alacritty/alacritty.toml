@@ -1,0 +1,10 @@
+
+[font.normal]
+family = "Iosevka Nerd Font Mono"
+
+[font]
+size = 14 
+
+
+[window]
+option_as_alt = "Both"
