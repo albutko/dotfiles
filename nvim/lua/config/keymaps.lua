@@ -11,3 +11,5 @@ vim.keymap.set("n", "<C-d>", "<C-d> M", { silent = true })
 
 -- Copy buffers path to clipboard
 vim.keymap.set("n", "cp", ":let @+ = expand('%')<CR>", { silent = true })
+
+vim.keymap.del("i", "<Tab>")
