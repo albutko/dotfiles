@@ -1,0 +1,8 @@
+alias n="nvim ."
+alias t=tmux
+alias sz="source ~/.zshrc"
+alias cvr="cd ~/repos/dsml/computer-vision"
+alias zc="nvim ~/.zshrc"
+alias cvo="cd ~/repos/dsml/computer-vision/dsml-cvml-orchestrator"
+alias cvm="cd ~/repos/dsml/computer-vision/models"
+alias cm="cd ~/repos/dsml/common"
