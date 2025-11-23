@@ -77,7 +77,8 @@ source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-vi-mode)
+
+plugins=(git zsh-autosuggestions zsh-vi-mode tmux)
 
 #brew autocompletion
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
@@ -113,56 +114,41 @@ source $ZSH/oh-my-zsh.sh
 #Azure CLI auto completion
 autoload bashcompinit && bashcompinit
 source $(brew --prefix)/etc/bash_completion.d/az
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
-eval "$(pyenv virtualenv-init -)"
 eval $(thefuck --alias)
 eval "$(direnv hook zsh)"
 
 sys_python="$HOME/Library/Python/3.11/bin"
 export PATH="$PATH:${sys_python}"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/alexbutenko/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/alexbutenko/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/alexbutenko/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/alexbutenko/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
 if [ -f ~/.creds ]; then
   source ~/.creds
 fi
 
+if [ -f ~/.env_vars ]; then
+  source ~/.env_vars
+fi
 
+if [ -f ~/.zsrch.work ]; then
+  source ~/.zshrc.work
+fi
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+# Set neovim as editor
+export EDITOR=nvim
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/alexbutenko/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 #
 source ~/.aliases
-
-export PATH="/Users/alexbutenko/scripts:$PATH"
 
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"
 
 . "$HOME/.cargo/env"
+
+# Created by `pipx` on 2024-10-23 18:44:56
+export PATH="$PATH:$HOME/.local/bin"
+export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+
+eval "$(uv generate-shell-completion zsh)"
+eval "$(uvx --generate-shell-completion zsh)"
+export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+
