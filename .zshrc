@@ -111,7 +111,7 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-#Azure CLI auto completion
+
 autoload bashcompinit && bashcompinit
 source $(brew --prefix)/etc/bash_completion.d/az
 eval $(thefuck --alias)
@@ -136,7 +136,11 @@ fi
 export EDITOR=nvim
 
 #
-source ~/.aliases
+alias n=nvim
+alias t=tmux
+alias sz="source ~/.zshrc"
+alias zc="nvim ~/.zshrc"
+alias lg="lazygit"
 
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
