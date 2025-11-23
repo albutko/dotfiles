@@ -7,3 +7,5 @@ size = 17
 
 [window]
 option_as_alt = "Both"
+[keyboard]
+bindings = [ { key = "Return", mods = "Shift", chars = "\n" } ]
