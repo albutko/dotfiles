@@ -1,3 +1,8 @@
+[general]
+import = [
+  "~/.config/alacritty/catppuccin-mocha.toml"
+]
+
 [font.normal]
 family = "IosevkaTerm Nerd Font Mono"
 style = "Regular"
@@ -10,6 +15,6 @@ option_as_alt = "Both"
 [keyboard]
 bindings = [ { key = "Return", mods = "Shift", chars = "\n" } ]
 
-general.import = [
-  "~/.config/alacritty/catppuccin-mocha.toml"
-]
+
+[env]
+TERM = "xterm-256color"
