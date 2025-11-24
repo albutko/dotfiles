@@ -156,3 +156,5 @@ eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 
+eval "$(zoxide init zsh)"
+
