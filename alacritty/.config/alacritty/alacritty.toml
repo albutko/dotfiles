@@ -4,7 +4,7 @@ import = [
 ]
 
 [font.normal]
-family = "IosevkaTerm Nerd Font Mono"
+family = "JetBrainsMono Nerd Font"
 style = "Regular"
 
 [font]
