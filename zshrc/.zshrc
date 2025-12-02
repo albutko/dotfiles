@@ -128,7 +128,7 @@ if [ -f ~/.env_vars ]; then
   source ~/.env_vars
 fi
 
-if [ -f ~/.zsrch.work ]; then
+if [ -f ~/.zshrc.work ]; then
   source ~/.zshrc.work
 fi
 
