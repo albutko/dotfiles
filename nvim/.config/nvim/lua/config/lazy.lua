@@ -44,5 +44,3 @@ require("lazy").setup({
     },
   },
 })
-
-vim.g.python3_host_prog = "/Users/alexbutenko/.pyenv/versions/py3nvim/bin/python"
