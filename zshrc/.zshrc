@@ -148,13 +148,20 @@ export LC_CTYPE="en_US.UTF-8"
 
 . "$HOME/.cargo/env"
 
-# Created by `pipx` on 2024-10-23 18:44:56
-export PATH="$PATH:$HOME/.local/bin"
-export PATH="/opt/homebrew/opt/curl/bin:$PATH"
-
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 
 eval "$(zoxide init zsh)"
 
+
+# bun completions
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="$HOME/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
