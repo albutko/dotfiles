@@ -10,9 +10,7 @@ fi
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-
-# Set powerlevel10k theme
-source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
+export ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(git zsh-autosuggestions zsh-vi-mode tmux)
 
