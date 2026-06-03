@@ -1,4 +1,4 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Enable Powerlevel11k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -24,7 +24,6 @@ source $ZSH/oh-my-zsh.sh
 
 
 autoload bashcompinit && bashcompinit
-source $(brew --prefix)/etc/bash_completion.d/az
 eval $(thefuck --alias)
 eval "$(direnv hook zsh)"
 
@@ -59,6 +58,8 @@ export LC_CTYPE="en_US.UTF-8"
 
 . "$HOME/.cargo/env"
 
+. "$HOME/.local/bin/env"
+
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
@@ -76,3 +77,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="$HOME/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
