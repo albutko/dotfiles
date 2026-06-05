@@ -22,25 +22,7 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-
 autoload bashcompinit && bashcompinit
-eval $(thefuck --alias)
-eval "$(direnv hook zsh)"
-
-sys_python="$HOME/Library/Python/3.11/bin"
-export PATH="$PATH:${sys_python}"
-
-if [ -f ~/.creds ]; then
-  source ~/.creds
-fi
-
-if [ -f ~/.env_vars ]; then
-  source ~/.env_vars
-fi
-
-if [ -f ~/.zshrc.work ]; then
-  source ~/.zshrc.work
-fi
 
 # Set neovim as editor
 export EDITOR=nvim
@@ -56,28 +38,4 @@ export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"
 
-. "$HOME/.cargo/env"
-
-. "$HOME/.local/bin/env"
-
-eval "$(uv generate-shell-completion zsh)"
-eval "$(uvx --generate-shell-completion zsh)"
-export PATH="/opt/homebrew/opt/curl/bin:$PATH"
-
 eval "$(zoxide init zsh)"
-
-
-# bun completions
-[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="$HOME/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
