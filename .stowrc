@@ -1,3 +1,4 @@
 --ignore=.stowrc
 --ignore=DS_Store
 --target=$HOME
+--ignore=bootstrap.sh

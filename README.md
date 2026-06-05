@@ -16,13 +16,17 @@ Personal dotfiles, managed with [GNU Stow](https://www.gnu.org/software/stow/).
 
 ## Setup
 
-Install the tools listed in the [Packages](#packages) table, plus [GNU Stow](https://www.gnu.org/software/stow/) and [oh-my-zsh](https://ohmyz.sh/), using your preferred method (e.g. `brew`).
-
 Clone the repo:
 
 ```sh
 git clone https://github.com/<you>/dotfiles ~/dotfiles
 cd ~/dotfiles
+```
+
+Install the utilities used by `zsh/.zshrc`:
+
+```sh
+./bootstrap.sh
 ```
 
 Stow target is set to `$HOME` via `.stowrc`. Symlink everything:
@@ -34,7 +38,7 @@ stow */
 Or pick individual packages:
 
 ```sh
-stow nvim tmux zshrc
+stow nvim tmux zsh
 ```
 
 To remove symlinks for a package:
