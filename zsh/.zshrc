@@ -33,6 +33,7 @@ alias t=tmux
 alias sz="source ~/.zshrc"
 alias zc="nvim ~/.zshrc"
 alias lg="lazygit"
+alias my-prs="gh pr list --author '@me'"
 
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
@@ -44,3 +45,5 @@ if [[ -r "$HOME/.local.zsh" ]]; then
   source "$HOME/.local.zsh"
 fi
 
+
+if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init zsh)"; fi
