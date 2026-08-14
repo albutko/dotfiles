@@ -13,7 +13,12 @@ fi
 
 if ! git pull --rebase --autostash -q; then
   git rebase --abort 2>/dev/null || true
-  osascript -e 'display notification "dotfiles sync hit a conflict — resolve by hand" with title "dotfiles-sync"' || true
+  msg="dotfiles sync hit a conflict — resolve by hand"
+  case "$(uname)" in
+    Darwin) osascript -e "display notification \"$msg\" with title \"dotfiles-sync\"" || true ;;
+    Linux) command -v notify-send >/dev/null 2>&1 && notify-send "dotfiles-sync" "$msg" || true ;;
+  esac
+  echo "dotfiles-sync: $msg" >&2
   exit 1
 fi
 
