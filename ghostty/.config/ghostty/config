@@ -1,3 +1,12 @@
 term = xterm-256color
 theme = catppuccin-mocha.conf
+background-opacity = 0.97
+background-blur = true
+macos-titlebar-style = hidden
 keybind = shift+enter=text:\x1b\r
+
+# Mouse selection goes straight to the system clipboard (herdr handles its own
+# selections via OSC 52; this covers plain windows and modifier-held selects).
+copy-on-select = clipboard
+# Apps (herdr copy_on_select, nvim over SSH) write the clipboard via OSC 52.
+clipboard-write = allow

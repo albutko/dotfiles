@@ -77,6 +77,7 @@ install_brew_packages() {
     "git:git"
     "neovim:nvim"
     "tmux:tmux"
+    "herdr:herdr"
     "lazygit:lazygit"
     "zoxide:zoxide"
     "zsh:zsh"
@@ -124,7 +125,7 @@ main() {
   clone_if_missing "https://github.com/tmux-plugins/tpm.git" "$tmux_plugins_dir/tpm"
 
   log "Done"
-  printf 'Utilities from zsh/.zshrc are installed. Run `stow zsh p10k` from this repo if you have not linked the dotfiles yet.\n'
+  printf 'Utilities from zsh/.zshrc are installed. Run `stow zsh p10k herdr` from this repo if you have not linked the dotfiles yet.\n'
 }
 
 main "$@"

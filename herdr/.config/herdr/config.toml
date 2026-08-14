@@ -1,0 +1,14 @@
+onboarding = false
+[theme]
+name = "catppuccin"
+
+[ui]
+agent_panel_sort = "spaces"
+
+# lazygit popup, mirrors the old tmux prefix+C-l binding
+[[keys.command]]
+key = "prefix+ctrl+l"
+type = "popup"
+command = "lazygit"
+width = "80%"
+height = "80%"
