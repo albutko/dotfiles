@@ -1,3 +1,10 @@
+# Homebrew must be initialized before any startup integrations (including Herdr)
+# because some shells launched by multiplexers are not login shells and skip
+# ~/.zprofile.
+if [[ -x /home/linuxbrew/.linuxbrew/bin/brew ]]; then
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
+
 # Auto-attach ghostty windows to the persistent herdr session (main driver).
 # HERDR_ENV guards nesting: pane shells inherit TERM_PROGRAM from wherever the
 # server started, so it alone can't tell a pane from a fresh ghostty window.
