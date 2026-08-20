@@ -242,14 +242,13 @@
       "updatedAt": "2026-08-12T13:25:29.713Z"
     },
     "triage": {
-      "source": "mattpocock/skills",
+      "source": "herdrdev/herdr",
       "sourceType": "github",
-      "sourceUrl": "https://github.com/mattpocock/skills.git",
-      "skillPath": "skills/engineering/triage/SKILL.md",
-      "skillFolderHash": "b20940845332f540e3f17b0cb32d45fd8c2298bf",
-      "pluginName": "mattpocock-skills",
+      "sourceUrl": "https://github.com/herdrdev/herdr.git",
+      "skillPath": ".agents/skills/triage/SKILL.md",
+      "skillFolderHash": "5807b11e6baafe4298ec6266c2224a141ac7229d",
       "installedAt": "2026-08-12T13:25:29.714Z",
-      "updatedAt": "2026-08-12T13:25:29.714Z"
+      "updatedAt": "2026-08-20T13:36:10.766Z"
     },
     "claude-handoff": {
       "source": "mattpocock/skills",
@@ -340,6 +339,33 @@
       "skillFolderHash": "31af0156520819c15d19358a8e0bd36f82e67ad3",
       "installedAt": "2026-08-12T13:25:29.731Z",
       "updatedAt": "2026-08-12T13:25:29.731Z"
+    },
+    "herdr": {
+      "source": "herdrdev/herdr",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/herdrdev/herdr.git",
+      "skillPath": "skills/herdr/SKILL.md",
+      "skillFolderHash": "f8bb649bb92ddc99e6af463ab9a635da98c7b129",
+      "installedAt": "2026-08-20T13:36:10.761Z",
+      "updatedAt": "2026-08-20T13:36:10.761Z"
+    },
+    "herdr-pre-release-audit": {
+      "source": "herdrdev/herdr",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/herdrdev/herdr.git",
+      "skillPath": ".agents/skills/herdr-pre-release-audit/SKILL.md",
+      "skillFolderHash": "5b62140c6f3dff0a79d80e66b1568b69074f27ad",
+      "installedAt": "2026-08-20T13:36:10.764Z",
+      "updatedAt": "2026-08-20T13:36:10.764Z"
+    },
+    "herdr-throwaway-repro": {
+      "source": "herdrdev/herdr",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/herdrdev/herdr.git",
+      "skillPath": ".agents/skills/herdr-throwaway-repro/SKILL.md",
+      "skillFolderHash": "63859ec151929ab39cdf0e95f7dd6ad8bbe8d648",
+      "installedAt": "2026-08-20T13:36:10.765Z",
+      "updatedAt": "2026-08-20T13:36:10.765Z"
     }
   },
   "dismissed": {
@@ -359,6 +385,7 @@
     "opencode",
     "warp",
     "zed",
-    "pi"
+    "pi",
+    "claude-code"
   ]
 }
