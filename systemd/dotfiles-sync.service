@@ -1,6 +1,0 @@
-[Unit]
-Description=Sync dotfiles repo (commit, rebase-pull, push)
-
-[Service]
-Type=oneshot
-ExecStart=/bin/bash -c 'set -a; . %h/.ssh/agent.env; exec %h/dotfiles/bin/dotfiles-sync'
