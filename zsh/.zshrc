@@ -5,16 +5,6 @@ if [[ -x /home/linuxbrew/.linuxbrew/bin/brew ]]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
-# Auto-attach ghostty windows to the persistent herdr session (main driver).
-# HERDR_ENV guards nesting: pane shells inherit TERM_PROGRAM from wherever the
-# server started, so it alone can't tell a pane from a fresh ghostty window.
-# No exec: the shell survives herdr, so detaching drops back to a prompt
-# instead of killing the window's only process and closing ghostty with it.
-if [[ -o interactive && "$TERM_PROGRAM" == "ghostty" && -z "$HERDR_ENV" && -z "$TMUX" && -z "$SSH_CONNECTION" ]] \
-   && command -v herdr >/dev/null 2>&1; then
-  herdr
-fi
-
 # Enable Powerlevel11k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.

@@ -5,6 +5,9 @@ name = "catppuccin"
 [ui]
 agent_panel_sort = "spaces"
 
+[remote]
+manage_ssh_config = false
+
 # lazygit popup, mirrors the old tmux prefix+C-l binding
 [[keys.command]]
 key = "prefix+ctrl+l"
