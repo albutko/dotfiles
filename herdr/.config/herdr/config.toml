@@ -6,7 +6,7 @@ name = "catppuccin"
 agent_panel_sort = "spaces"
 
 [remote]
-manage_ssh_config = false
+manage_ssh_config = true
 
 # lazygit popup, mirrors the old tmux prefix+C-l binding
 [[keys.command]]
